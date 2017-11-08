@@ -24,3 +24,6 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+For ngRx docs you can refer (https://github.com/ngrx)
+
+

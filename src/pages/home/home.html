@@ -6,12 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding *ngIf="colorList$">
+<ion-content padding>
+<div *ngIf="colorList$ | async as colorState">
 
-  <div *ngFor="let color of colorList$">
+
+  <div *ngFor="let color of colorState['colorList']">
     <div style="width: 100px;height: 100px" [style.backgroundColor]="color"></div>
   </div>
-
+</div>
   <button ion-button (click)="addColors()">
     Add some colors
   </button>

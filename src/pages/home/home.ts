@@ -18,10 +18,7 @@ var reduxLogger = require('redux-logger');
 export class HomePage {
     colorList$: any;
     constructor(private store: Store<ColorListState>) {
-        this.store.select('colorReducer').subscribe((res) => {
-          this.colorList$ = res['colorList'];
-        });
-
+        this.colorList$ = this.store.select('colorReducer');
         this.store.dispatch({
           type: ColorActions.LOAD_COLORS
         });
